@@ -1,0 +1,1 @@
+Thanks to `hermitdave` (https://github.com/hermitdave/FrequencyWords) for the frequency lists used in this project. 

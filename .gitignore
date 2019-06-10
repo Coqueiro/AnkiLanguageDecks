@@ -1,3 +1,7 @@
+# Project generated files
+helpers/frequency_list/full_lists
+helpers/frequency_list/lists
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
