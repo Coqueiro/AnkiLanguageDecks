@@ -1,6 +1,9 @@
 # Project generated files
 helpers/frequency_list/full_lists
 helpers/frequency_list/lists
+sentences.tar.bz2
+sentences_with_audio.tar.bz2
+links.tar.bz2
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
