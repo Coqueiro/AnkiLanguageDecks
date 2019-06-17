@@ -1,11 +1,11 @@
 # Plans for the first release
-- Frequency List
-- Pair Sentences
-- Tokenization, Stemming and Lemmatization
-- Scoring Pair Sentences according to difficulty
-- Assigning Frequency List to Pair Sentences
-- Including Audio from Tatoeba
-- Anki Deck automatic generation
+- :white_check_mark: Frequency List
+- :white_check_mark: Pair Sentences
+- :negative_squared_cross_mark: Tokenization, Stemming and Lemmatization
+- :negative_squared_cross_mark: Scoring Pair Sentences according to difficulty
+- :negative_squared_cross_mark: Assigning Frequency List to Pair Sentences
+- :negative_squared_cross_mark: Including Audio from Tatoeba
+- :negative_squared_cross_mark: Anki Deck automatic generation
 
 # After the first release
 - Try to prioritize Pair Sentences with already seen words from the Frequency List (how to engage this problem?)
@@ -17,6 +17,7 @@
 -----------------------
 
 Thanks to `hermitdave`/[FrequencyWords](https://github.com/hermitdave/FrequencyWords) for the frequency lists used in this project. 
+
 Thanks to `kmicklas`/[sentence-pairs](https://github.com/kmicklas/sentence-pairs) for the logic to extract pairs from Tatoeba files.
 
 Thanks to (https://en.wiki.tatoeba.org/articles/show/make-anki) for a clear example on how to export translated sentences from Tatoeba.
