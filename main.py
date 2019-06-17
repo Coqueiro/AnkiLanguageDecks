@@ -10,5 +10,5 @@ if __name__ == '__main__':
         translate_lang="es", quantity_of_words=6000)
     frequency_list_builder.get_list()
 
-    # pair_sentences = PairSentences("pt_br")
-    # pair_sentences.hello_world()
+    pair_sentences = PairSentences("es", "pt_br", download=False)
+    pair_sentences.create_sentence_pairs()
