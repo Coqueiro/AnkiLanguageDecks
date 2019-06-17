@@ -47,7 +47,7 @@ class PairSentences:
             sentence_file_reader = csv.reader(sentence_file, delimiter='\t')
             for row in sentence_file_reader:
                 if row[1] == self.base_lang:
-                    base_sentences[row[0]] = [row[2]]
+                    base_sentences[row[0]] = row[2]
                 elif row[1] in self.translate_lang:
                     translate_sentences[row[0]] = row[2]
 
@@ -55,12 +55,17 @@ class PairSentences:
 
     def get_sentence_pairs(self, sentence_links_path, base_sentences, translate_sentences):
         with open(sentence_links_path, 'r', encoding='utf-8') as links_file:
+            sentence_pairs = []
             links_file_reader = csv.reader(links_file, delimiter='\t')
             for row in links_file_reader:
-                if row[0] in base_sentences and row[1] in translate_sentences and len(base_sentences[row[0]]) == 1:
-                    base_sentences[row[0]].append(
-                        translate_sentences[row[1]])
-        return base_sentences
+                if row[0] in base_sentences and row[1] in translate_sentences:
+                    sentence_pairs.append([
+                        row[0],
+                        base_sentences[row[0]],
+                        row[1],
+                        translate_sentences[row[1]]
+                    ])
+        return sentence_pairs
 
     def create_sentence_pairs(self):
         sentences_file_path, sentence_links_path, sentences_with_audio_path = self.get_all_sentences_files()
@@ -74,6 +79,6 @@ class PairSentences:
 
         with open(pairs_path, "w") as pairs_file:
             pairs_file.writelines(
-                '\t'.join(sentence_pairs[index]) + '\n' for index in sentence_pairs)
+                '\t'.join(sentence_pair) + '\n' for sentence_pair in sentence_pairs)
 
         return pairs_path

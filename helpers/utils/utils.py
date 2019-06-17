@@ -29,7 +29,7 @@ def decompress_file(path, decompress=True):
 
 def get_language_code(code, iso):
     if code == "pt_br":
-        code == "pt"
+        code = "pt"
     lang = languages.get(alpha2=code)
     if iso == "639-2":
         return lang.terminology
