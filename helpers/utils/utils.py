@@ -1,5 +1,6 @@
 import os
 import tarfile
+from iso639 import languages
 from urllib.request import urlretrieve
 
 
@@ -24,3 +25,11 @@ def decompress_file(path, decompress=True):
         tar.extractall()
         tar.close()
     return path.split(".tar.")[0] + ".csv"
+
+
+def get_language_code(code, iso):
+    if code == "pt_br":
+        code == "pt"
+    lang = languages.get(alpha2=code)
+    if iso == "639-2":
+        return lang.terminology
